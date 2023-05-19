@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Fira Code";
+  background-color: #272822;
+}
+
+.ace-monokai .ace_cursor {
+  color: #ffd866;
+}
+
+.ace-monokai .ace_hidden-cursors {
+  opacity: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(96, 96, 96);
+}
+
+*::-webkit-scrollbar-track {
+  margin: 8px;
+  border-radius: 8px;
+  background-color: #272822;
+}
