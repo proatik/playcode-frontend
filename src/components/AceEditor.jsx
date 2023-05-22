@@ -4,9 +4,14 @@ import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/ace";
 import "ace-builds/src-noconflict/mode-ruby";
 import "ace-builds/src-noconflict/mode-python";
-import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/mode-javascript";
+import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-noconflict/snippets/ruby";
+import "ace-builds/src-noconflict/snippets/python";
+import "ace-builds/src-noconflict/snippets/javascript";
 import "ace-builds/src-noconflict/keybinding-sublime";
+import "ace-builds/src-noconflict/ext-language_tools";
+import "ace-builds/src-noconflict/ext-inline_autocomplete";
 
 ace.config.set("basePath", "ace-builds/src-min-noconflict");
 // ---x---x---x---x---x--- ace editor ---x---x---x---x---x--- //
@@ -74,11 +79,14 @@ export default function Editor() {
         theme="monokai"
         mode={language}
         className="flex-1"
+        enableSnippets={true}
         onChange={changeCode}
         value={codes[language]}
         showPrintMargin={false}
         keyboardHandler="sublime"
         highlightActiveLine={false}
+        enableLiveAutocompletion={true}
+        enableBasicAutocompletion={true}
         setOptions={{
           useWorker: false,
           highlightGutterLine: false,
