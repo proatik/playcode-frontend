@@ -5,7 +5,7 @@ const MainContext = createContext();
 
 // ---o---o---o---o--- server urls ---o---o---o---o--- //
 // const base_url = "http://localhost:5000";
-const base_url = "https://playcode.onrender.com";
+const base_url = import.meta.env.VITE_BASE_URL;
 
 const urls = {
   ping: `${base_url}/ping`,
